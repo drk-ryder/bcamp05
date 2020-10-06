@@ -9,7 +9,7 @@ const CounterReducer = (state, action) => {
         case 'DECREMENT' :
             return state - 1
         default :
-            return 0
+            throw new Error()
     }
 }
 
