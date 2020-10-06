@@ -1,13 +1,13 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: bcamp04
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the main branch
 on:
   push:
     branches: [ main ]
-
+  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -20,7 +20,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-       # Runs a single command using the runners shell
+      # Runs a single command using the runners shell
       - name: Setting Node Environment
         uses: actions/setup-node@v2-beta
         with:
@@ -39,5 +39,4 @@ jobs:
         run: npm install --global surge
         
       - name: Configuring Surge
-        run: surge ./build bcamp05.surge.sh --token ${{secrets.SURGE_TOKEN}}
-
+        run: surge ./build bcamp04.surge.sh --token ${{secrets.SURGE_TOKEN}}
