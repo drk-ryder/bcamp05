@@ -1,10 +1,10 @@
 import React, { useReducer } from 'react';
-import CounterReducer from './CounterReducer';
+import counterReducer from './CounterReducer';
 
 
 const Child2 = () =>{
 
-    let [state, dispatch] = useReducer(CounterReducer, 20);
+    let [state, dispatch] = useReducer(counterReducer, 20);
     console.log(state);
 
     return(

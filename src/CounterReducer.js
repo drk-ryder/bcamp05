@@ -1,6 +1,6 @@
 
 
-const CounterReducer = (state, action) => {
+const counterReducer = (state, action) => {
     switch(action){
         
         case 'INCREMENT' :
@@ -13,4 +13,4 @@ const CounterReducer = (state, action) => {
     }
 }
 
-export default CounterReducer;
+export default counterReducer;
