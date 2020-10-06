@@ -8,6 +8,8 @@ const CounterReducer = (state, action) => {
         
         case 'DECREMENT' :
             return state - 1
+        default :
+            return 0
     }
 }
 
