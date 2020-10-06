@@ -20,19 +20,22 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: NPM environment configuration
+       # Runs a single command using the runners shell
+      - name: Setting Node Environment
         uses: actions/setup-node@v2-beta
         with:
           version: 12
-      
-      - name: Installing npm
+
+      # Runs a set of commands using the runners shell
+      - name: Adding the node_module folder
         run: npm install
 
-      - name: Building npm
+
+      - name: Adding build folder
         run: npm run build
         
-      - name: Installing Surge
+        
+      - name: Installing surge
         run: npm install --global surge
         
       - name: Configuring Surge
