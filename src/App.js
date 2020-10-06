@@ -10,7 +10,7 @@ function App() {
     <counterContext.Provider value={count}>
     <div className='App'>
       <h2>Welcome to React Learning</h2>
-      <h6>By Sohail</h6>
+      <h6>By Sohail Ishaque</h6>
       <Parent />
     </div>
     </counterContext.Provider>
