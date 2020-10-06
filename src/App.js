@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import Parent from './Parent.js';
+import counterContext from './CounterContext';
 import './App.css';
 
 function App() {
+  let count = useState(200);
+  // let [count, setCount] = useState(50);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <counterContext.Provider value={count}>
+    <div className='App'>
+      <h2>Welcome to React Learning</h2>
+      <h6>By Sohail</h6>
+      <Parent />
     </div>
+    </counterContext.Provider>
   );
 }
 
